@@ -159,7 +159,7 @@ def collect_objects(objects)
 class UI
 
   def initialize
-    @font = Gosu::Font.new(35, name: "front/mfn-icons")
+    @font = Gosu::Font.new(35, name: "txt/mfn-icons")
   end
 
   def draw(score:)
