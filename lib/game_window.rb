@@ -17,7 +17,7 @@ attr_reader :score
     @flag = {x: WINDOW_X - SPRITE_SIZE, y: WINDOW_Y - SPRITE_SIZE}
 #Un son du jeu angrybirds sera joué à chaque fois que le hero ramasse un object.
     @sound_collect = Gosu::Sample.new("musics/Bonus.wav")
-    @sound_Nocollect = Gosu::Sample.new("musics/Dmg.wav")
+    @sound_biscollect = Gosu::Sample.new("musics/Dmg.wav")
     @music = Gosu::Song.new(self, "musics/angry.wav")
     @lose_sprite = Gosu::Image.new(self, 'images/flag.png', true)
     @items = []
@@ -198,7 +198,7 @@ def collision(type)
       @sound_collect.play
     when :egg
      @score += 10
-     @sound_Nocollect.play
+     @sound_biscollect.play
     end
 
     true
